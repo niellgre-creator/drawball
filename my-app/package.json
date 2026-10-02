@@ -1,0 +1,24 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "My desktop app",
+  "main": "main.js",
+  "author": "polartin_",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "productName": "My App",
+    "files": ["main.js", "app/**/*"],
+    "win": { "target": "portable" },
+    "portable": { "artifactName": "MyApp.exe" },
+    "mac": { "target": "zip" },
+    "linux": { "target": "AppImage" }
+  }
+}
